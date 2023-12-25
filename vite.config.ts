@@ -8,6 +8,6 @@ export default defineConfig({
 
   assetsInclude: ['**/*.hdr'],
 
-  base: '/Shiny-Ball'
+  base: '/Shiny-Ball/'
 
 })
