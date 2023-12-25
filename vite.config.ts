@@ -6,6 +6,8 @@ export default defineConfig({
 
   plugins: [react()],
 
-  assetsInclude: ['**/*.hdr']
+  assetsInclude: ['**/*.hdr'],
+
+  base: '/'
 
 })
