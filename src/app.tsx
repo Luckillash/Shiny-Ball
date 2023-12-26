@@ -12,7 +12,7 @@ function ShinyBall () {
 
     //#region Setup
 
-	let Escena =  new THREE.Scene()
+	const Escena =  new THREE.Scene()
 
 	let Camara = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
 
@@ -84,15 +84,15 @@ function ShinyBall () {
 
 	}
 
-    function GenerarEsferaReflectante (Renderizador: any) {
+    function GenerarEsferaReflectante (Renderizador: THREE.WebGLRenderer) {
 
-        let envmaploader = new THREE.PMREMGenerator(Renderizador)
+        const envmaploader = new THREE.PMREMGenerator(Renderizador)
 
         new RGBELoader().load(Reflexion, function(HDR) {
     
-            let envmap = envmaploader.fromCubemap(HDR as unknown as CubeTexture)
+            const envmap = envmaploader.fromCubemap(HDR as unknown as CubeTexture)
     
-            let Textura = new THREE.CanvasTexture(new FlakesTexture())
+            const Textura = new THREE.CanvasTexture(new FlakesTexture())
         
             Textura.wrapS =  THREE.RepeatWrapping
         
